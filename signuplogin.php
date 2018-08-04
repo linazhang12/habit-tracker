@@ -3,26 +3,37 @@
 ?>
 		<div class = "container-fluid padding">
 			<div class="row">		
-				<div class="col-xs-12 col-md-9">				
-					<p>Monitor <br>Your<br> Habits</p>
+				<div class="col-xs-12 col-md-4">				
 				</div>
 
-				<div class="col-xs-12 col-md-3">
-					<h class="enter"> Sign-up </h> 
+				<!-- singup/login form -->
+				<div class="formborder col-xs-12 col-md-4">
+					<h class="enter"> SIGNUP </h> 
 						<form class = "form" action="includes/signup.inc.php" method="POST">
+							<div class="form-group">
 							<input type="email" name="email" placeholder="E-mail">
+							</div>
+							<div class="form-group">
 							<input type="text" name="uid" placeholder="Username">
+							</div>
+							<div class="form-group">
 							<input type="password" name="pwd" placeholder="Password">
-							<button type="submit" name="submit">Signup</button>
+							</div>
+							<button type="submit" name="submit">SIGNUP</button>
 						</form>
 					
-					<h class="enter">Login</h>
+					<h class="enter">LOGIN</h>
 						<form class = "form" action="includes/login.inc.php" method="POST">
+							<div class="form-group">
 							<input type="text" name="uid" placeholder="Username">
+							</div>
+							<div class="form-group">
 							<input type="password" name="pwd" placeholder="Password">
-							<button type="submit" name="submit">Login</button>
+							</div>
+							<button type="submit" name="submit">LOGIN</button>
 						</form>
 					<?php
+
 						//displays error message to tell user of incorrect signup/login
 
 						if(!isset($_GET['signup']) && !isset($_GET['login'])){
@@ -51,8 +62,13 @@
 						}
 					?>
 				</div>
+				<div class="col-xs-12 col-md-4">				
+				</div>
 			</div>
 		</div>
+
+
+		
 
 <?php 
 
